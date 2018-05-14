@@ -1,0 +1,17 @@
+<html>
+   <head>
+      <script type="text/javascript" src="myNotesFunctions.js"></script>
+      <link rel="stylesheet" type="text/css" href="myNotesStyles.css">
+   </head>
+   <body onload="main(myNotes)">
+      <div id="#wrap">
+         <p id="title">My Notepad</p>
+         <textarea name="myNotes" id="myNotes" onfocus="this.value = this.value;" onfocusout="setCookie(myNotes)"></textarea>
+      </div>
+      <button onclick="clearContent(myNotes)">Clear Content</button>
+      <button onclick="location.reload();">Refresh</button>
+      <button onclick="selectAll(myNotes)">Select All</button>
+      <br />
+      <button onclick="copyToClipboard(myNotes)">Copy to clipboard</button>
+   </body>
+</html>
